@@ -2,3 +2,23 @@ body {
     background-color: rgb(15, 20, 97);
     color: white;
 }
+
+.dark-gray-container {
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+}
+
+.menuItem {
+    border: 2px solid gray;
+    background-color: rgb(24, 24, 24);
+}
+
+.active {
+    border-bottom: 4px solid rgb(76, 78, 219); 
+}
+
+.menuItem > a {
+    padding-left: 2%;
+    padding-right: 2%;
+    text-decoration: none;
+}
