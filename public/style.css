@@ -5,16 +5,26 @@ body {
 
 .dark-gray-container {
     width: 100%;
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(15, 15, 15);
+}
+
+.nb-bg-dark {
+    background-color: rgb(15, 15, 15);
+    padding: 2px;
 }
 
 .menuItem {
-    border: 2px solid gray;
+    border: 2px solid rgb(32, 32, 32);
     background-color: rgb(24, 24, 24);
 }
 
+.menuItem:hover {
+    background-color: rgb(12, 10, 19);
+    border-color: rgb(20, 18, 24);
+}
+
 .active {
-    border-bottom: 4px solid rgb(76, 78, 219); 
+    border-bottom: 4px solid rgb(27, 29, 168); 
 }
 
 .menuItem > a {
