@@ -18,6 +18,10 @@ body {
     background-color: rgb(24, 24, 24);
 }
 
+.important > a {
+    color: red;
+}
+
 .menuItem:hover {
     background-color: rgb(12, 10, 19);
     border-color: rgb(20, 18, 24);

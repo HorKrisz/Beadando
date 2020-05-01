@@ -5,9 +5,13 @@
     switch ($_GET['P']) {
         case 'home': require_once PROTECTED_DIR.'normal/home.php'; break;
         
-        case 'browse': require_once PROTECTED_DIR.'games/browse.php'; break;
-        case 'favorites': require_once PROTECTED_DIR.'games/favorites.php'; break;
+        case 'login': !IsUserLoggedIn() ? require_once PROTECTED_DIR.'user/login.php' : header('Location: index.php'); break;
+        case 'register': !IsUserLoggedIn() ? require_once PROTECTED_DIR.'user/register.php' : header('Location: index.php'); break;
+        case 'logout': IsUserLoggedIn() ? UserLogout() : header('Location: index.php'); break;
 
+        case 'browse': IsUserLoggedIn() ? require_once PROTECTED_DIR.'games/browse.php' : header('Location: index.php'); break;
+        case 'favorites': IsUserLoggedIn() ? require_once PROTECTED_DIR.'games/favorites.php' : header('Location: index.php'); break;
+        
         default: require_once PROTECTED_DIR.'normal/pagenotfound.php'; break;
     }
 

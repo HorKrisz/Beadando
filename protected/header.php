@@ -1,1 +1,1 @@
-HEADER
+<img src="<?=PUBLIC_DIR.'images/placeholder.png'; ?>" class="img-fluid" alt="Kép">
