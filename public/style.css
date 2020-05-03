@@ -49,3 +49,27 @@ body {
     padding-right: 2%;
     text-decoration: none;
 }
+
+.gc-container {
+    color: rgb(27, 29, 168);
+    padding: 1%;
+    background-color: rgb(15, 15, 15);
+    border: 2px solid rgb(32, 32, 32);
+    margin-top: 2px;
+}
+
+.gamecard {
+    width: 200px;
+    height: 300px;
+    border: 2px solid gray;
+    background-color: rgb(12, 12, 12);
+    display: inline-block;
+    padding: 1%;
+    margin: 2%;
+    overflow: hidden;
+}
+
+.gamecard > img {
+    width: 100%;
+    height: 150px;
+}
