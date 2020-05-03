@@ -12,6 +12,8 @@
         case 'browse': IsUserLoggedIn() ? require_once PROTECTED_DIR.'games/browse.php' : header('Location: index.php'); break;
         case 'favorites': IsUserLoggedIn() ? require_once PROTECTED_DIR.'games/favorites.php' : header('Location: index.php'); break;
         
+        case 'add_game': IsUserLoggedIn() && $_SESSION['permission'] == 1 ? require_once PROTECTED_DIR.'games/add_game.php' : header('Location: index.php'); break;
+
         default: require_once PROTECTED_DIR.'normal/pagenotfound.php'; break;
     }
 

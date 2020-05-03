@@ -5,28 +5,38 @@ else
     $active = $_GET['P'];
 ?>
 
+<?php if(IsUserLoggedIn()) : ?>
+    Logged in as <?=$_SESSION['username']?> <span class="status"><?=$_SESSION['permission']==1 ? "[ADMIN]" : ""?></span>
+    <br>
+<?php endif; ?>
+
 <span class="menuItem <?=$active=='home'?"active":""; ?>">
-    <a href="index.php?P=home">Home</a>
-</span> &nbsp;
+    <a href="index.php">Home</a>
+</span>
 
 <?php if (IsUserLoggedIn()) : ?>
     <span class="menuItem <?=$active=='browse'?"active":""; ?>">
         <a href="index.php?P=browse">Browse</a>
-    </span> &nbsp;
+    </span>
     <span class="menuItem <?=$active=='favorites'?"active":""; ?>">
         <a href="index.php?P=favorites">Favorites</a>
-    </span> &nbsp;
-    <span class="menuItem important <?=$active=='logout'?"active":""; ?>">
+    </span>
+    <?php if (isset($_SESSION['permission']) && $_SESSION['permission'] == 1) : ?> 
+        <span class="menuItem adminItem <?=$active=='add_game'?"active":""; ?>">
+            <a href="index.php?P=add_game">Add game</a>
+        </span>
+    <?php endif; ?>
+
+    <span class="menuItem profile <?=$active=='logout'?"active":""; ?>">
         <a href="index.php?P=logout">Logout</a>
-    </span> &nbsp;
+    </span>
 
 <?php else: ?>
-
     <span class="menuItem <?=$active=='register'?"active":""; ?>">
         <a href="index.php?P=register">Register</a>
-    </span> &nbsp;
+    </span>
     <span class="menuItem <?=$active=='login'?"active":""; ?>">
         <a href="index.php?P=login">Login</a>
-    </span> &nbsp;
+    </span>
     
 <?php endif; ?>

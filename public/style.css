@@ -13,13 +13,26 @@ body {
     padding: 2px;
 }
 
+.status {
+    color: rgb(8, 133, 25)
+}
+
 .menuItem {
     border: 2px solid rgb(32, 32, 32);
     background-color: rgb(24, 24, 24);
+    margin-right: 1%;
 }
 
-.important > a {
+.profile > a {
     color: red;
+}
+
+.adminItem {
+    background-color: rgb(1, 44, 1);
+}
+
+.adminItem > a {
+    color: green;
 }
 
 .menuItem:hover {
