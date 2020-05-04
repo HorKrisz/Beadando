@@ -6,7 +6,7 @@ else
 ?>
 
 <?php if(IsUserLoggedIn()) : ?>
-    Logged in as <?=$_SESSION['username']?> <span class="status"><?=$_SESSION['permission']==1 ? "[ADMIN]" : ""?></span>
+    Logged in as <?=$_SESSION['username']?> <span class="status"><?=$_SESSION['permission']>=1 ? "[ADMIN]" : ""?></span>
     <br>
 <?php endif; ?>
 
@@ -21,7 +21,7 @@ else
     <span class="menuItem <?=$active=='favorites'?"active":""; ?>">
         <a href="index.php?P=favorites">Favorites</a>
     </span>
-    <?php if (isset($_SESSION['permission']) && $_SESSION['permission'] == 1) : ?> 
+    <?php if (isset($_SESSION['permission']) && $_SESSION['permission'] >= 1) : ?> 
         <span class="menuItem adminItem <?=$active=='add_game'?"active":""; ?>">
             <a href="index.php?P=add_game">Add game</a>
         </span>
