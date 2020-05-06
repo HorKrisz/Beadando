@@ -13,7 +13,7 @@
         case 'favorites': IsUserLoggedIn() ? require_once PROTECTED_DIR.'games/favorites.php' : header('Location: index.php'); break;
         
         case 'add_game': IsUserLoggedIn() ? require_once PROTECTED_DIR.'games/add_game.php' : header('Location: index.php'); break;
-
+        case 'user_list': IsUserLoggedIn() ? require_once PROTECTED_DIR.'user/list.php' : header('Location: index.php'); break;
         default: require_once PROTECTED_DIR.'normal/pagenotfound.php'; break;
     }
 

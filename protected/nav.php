@@ -21,10 +21,14 @@ else
     <span class="menuItem <?=$active=='favorites'?"active":""; ?>">
         <a href="index.php?P=favorites">Favorites</a>
     </span>
-    
+
     <?php if (isset($_SESSION['permission']) && $_SESSION['permission'] >= 1) : ?> 
         <span class="menuItem adminItem <?=$active=='add_game'?"active":""; ?>">
             <a href="index.php?P=add_game">Add game</a>
+        </span>
+
+        <span class="menuItem adminItem <?=$active=='user_list'?"active":""; ?>">
+            <a href="index.php?P=user_list">List users</a>
         </span>
     <?php endif; ?>
 

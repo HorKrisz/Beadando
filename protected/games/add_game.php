@@ -26,34 +26,36 @@
     }
     ?>
 
-    <form method="post">
-        <div class="form-row">
-            <div class="form-group">
-                <label for="gameImage">Image</label>
-                <input type="file" class="form-control-file" id="gameImage" name="gameimage">
+    <div class="main-container">
+        <form method="post">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="gameImage">Image</label>
+                    <input type="file" class="form-control-file" id="gameImage" name="gameimage">
+                </div>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="gameTitle">Title</label>
-                <input type="text" class="form-control" id="gameTitle" name="gametitle" value ="<?=isset($postData) ? $postData['gametitle'] : ""; ?>">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="gameTitle">Title</label>
+                    <input type="text" class="form-control" id="gameTitle" name="gametitle" value ="<?=isset($postData) ? $postData['gametitle'] : ""; ?>">
+                </div>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="gameCategory">Category</label>
-                <input type="text" class="form-control" id="gameCategory" name="gamecategory" value ="<?=isset($postData) ? $postData['gamecategory'] : ""; ?>">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="gameCategory">Category</label>
+                    <input type="text" class="form-control" id="gameCategory" name="gamecategory" value ="<?=isset($postData) ? $postData['gamecategory'] : ""; ?>">
+                </div>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-12">
-                <label for="gameDeveloper">Developer</label>
-                <input type="text" class="form-control" id="gameDeveloper" name="gamedeveloper" value ="<?=isset($postData) ? $postData['gamedeveloper'] : ""; ?>">
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="gameDeveloper">Developer</label>
+                    <input type="text" class="form-control" id="gameDeveloper" name="gamedeveloper" value ="<?=isset($postData) ? $postData['gamedeveloper'] : ""; ?>">
+                </div>
             </div>
-        </div>
 
-        <button type="submit" class="btn btn-primary" name="addGame">Add game</button>
-    </form>
+            <button type="submit" class="btn btn-primary" name="addGame">Add game</button>
+        </form>
+    </div>
 <?php else: ?>
     <?php header('Location: index.php'); ?>
 <?php endif; ?>

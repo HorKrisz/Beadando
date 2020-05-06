@@ -22,12 +22,12 @@
 }
 ?>
 <?php 
-$query = "SELECT id, title, category, developer, image FROM games";
+$query = "SELECT id, title, category, developer, image FROM games ORDER BY title ASC";
 require_once DATABASE_CONTROLLER;
 $games = getList($query);
 ?>
 
-<div class="gc-container">
+<div class="main-container">
     <?php if(count($games) <= 0): ?>
         There are no games!
     <?php else: ?>
@@ -35,14 +35,14 @@ $games = getList($query);
         <?php foreach($games as $g): ?>
             <?php $i++; ?>
             <div class="gamecard">
-                <img src="<?=PUBLIC_DIR.'images/'.$g['image']?>" alt="Borítókép">
+                <img src="<?=PUBLIC_DIR.'images/'.$g['image']; ?>" alt="Borítókép">
                 <div class="btns">
                     <a class="btn btn-primary" name="addToFavBtn" href="?P=browse&a=<?=$g['id']?>">Add to favorite</a>
                     <?php if(isset($_SESSION['permission']) && $_SESSION['permission'] >= 1): ?>
                         <a class="btn btn-secondary del-btn" name="delGameBtn" href="?P=browse&d=<?=$g['id']?>">Delete</a>
                     <?php endif; ?>
                 </div>
-                <div class="gc-info">
+                <div class="gc-info-b">
                     <center><h4><?=$g['title']; ?></h4></center>
                     <br>
                     <?=$g['category']; ?>
@@ -50,9 +50,6 @@ $games = getList($query);
                     <?=$g['developer']; ?>
                 </div>
             </div>
-            <?php if($i % 6 == 0): ?>
-                <br>
-            <?php endif; ?>
         <?php endforeach; ?>
     <?php endif; ?>
 </div>

@@ -26,36 +26,37 @@
 
 ?>
 
+<div class="main-container">
+    <form method="post">
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="registerUsername">Username</label>
+                <input type="text" class="form-control" id="registerUsername" name="username" value ="<?=isset($postData) ? $postData['username'] : ""; ?>">
+            </div>
+        </div>
 
-<form method="post">
-    <div class="form-row">
-        <div class="form-group col-md-12">
-            <label for="registerUsername">Username</label>
-            <input type="text" class="form-control" id="registerUsername" name="username" value ="<?=isset($postData) ? $postData['username'] : ""; ?>">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="registerEmail">Email</label>
+                <input type="email" class="form-control" id="registerEmail" name="email" value ="<?=isset($postData) ? $postData['email'] : ""; ?>">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="registerEmail1">Confirm Email</label>
+                <input type="email" class="form-control" id="registerEmail1" name="email1" value ="<?=isset($postData) ? $postData['email1'] : ""; ?>">
+            </div>
         </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="registerEmail">Email</label>
-            <input type="email" class="form-control" id="registerEmail" name="email" value ="<?=isset($postData) ? $postData['email'] : ""; ?>">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="registerPassword">Password</label>
+                <input type="password" class="form-control" id="registerPassword" name="password" value="">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="registerPassword1">Confirm Password</label>
+                <input type="password" class="form-control" id="registerPassword1" name="password1" value="">
+            </div>
         </div>
-        <div class="form-group col-md-6">
-            <label for="registerEmail1">Confirm Email</label>
-            <input type="email" class="form-control" id="registerEmail1" name="email1" value ="<?=isset($postData) ? $postData['email1'] : ""; ?>">
-        </div>
-    </div>
 
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="registerPassword">Password</label>
-            <input type="password" class="form-control" id="registerPassword" name="password" value="">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="registerPassword1">Confirm Password</label>
-            <input type="password" class="form-control" id="registerPassword1" name="password1" value="">
-        </div>
-    </div>
-
-    <button type="submit" class="btn btn-primary" name="register">Register</button>
-</form>
+        <button type="submit" class="btn btn-primary" name="register">Register</button>
+    </form>
+</div>

@@ -50,8 +50,19 @@ body {
     text-decoration: none;
 }
 
-.gc-container {
-    color: rgb(27, 29, 168);
+.home-info {
+    display: inline-block;
+    width: max-content;
+    margin: 1%;
+}
+
+.update-row {
+    color: rgb(8, 133, 25);
+    background-color: rgb(12, 10, 19);
+    margin-bottom: 10px;
+}
+
+.main-container {
     padding: 1%;
     background-color: rgb(15, 15, 15);
     border: 2px solid rgb(32, 32, 32);
@@ -68,12 +79,21 @@ body {
     box-shadow: 4px 2px 2px 2px black;
 }
 
-.gc-info {
+.gc-info-b {
     background-color: rgba(15, 15, 15, 0.8);
     margin: 0px;
     margin-bottom: 20px;
     position: relative;
     bottom: 38px;
+    color: white;
+}
+
+.gc-info {
+    background-color: rgba(15, 15, 15, 0.8);
+    margin: 0px;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 0px;
     color: white;
 }
 
@@ -94,6 +114,7 @@ body {
     position: absolute;
 }
 
-.gamecard:hover {
-    box-shadow: 4px 2px 2px 2px rgb(61, 85, 165);
+.gamecard:hover > .gc-info-b {
+    color: yellow;
+    background-color: rgba(15, 15, 15, 0.9);
 }
