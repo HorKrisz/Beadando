@@ -61,11 +61,11 @@ body {
 .gamecard {
     width: 200px;
     height: 300px;
-    background-color: rgb(12, 12, 12);
     display: inline-block;
     padding-bottom: 20px;
     margin: 2%;
     overflow: hidden;
+    box-shadow: 4px 2px 2px 2px black;
 }
 
 .gc-info {
@@ -92,4 +92,8 @@ body {
     width: inherit;
     height: inherit;
     position: absolute;
+}
+
+.gamecard:hover {
+    box-shadow: 4px 2px 2px 2px rgb(61, 85, 165);
 }

@@ -1,6 +1,4 @@
-<?php
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
+<?php if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
     $postData = [
         'username' => $_POST['username'],
         'email' => $_POST['email'],

@@ -1,5 +1,5 @@
 <?php 
-$query = "SELECT title, category, creator, image FROM games";
+$query = "SELECT title, category, developer, image FROM games";
 require_once DATABASE_CONTROLLER;
 $games = getList($query);
 ?>
@@ -15,7 +15,7 @@ $games = getList($query);
                 <img src="<?=PUBLIC_DIR.'images/'.$g['image']?>" alt="Borítókép">
                 <div class="fav-btn">
                     <a class="btn btn-primary" href="#">Add to favorite</a>
-                    <?php if($_SESSION['permission']>=1): ?>
+                    <?php if($_SESSION['permission'] >= 1): ?>
                         <a class="btn btn-secondary del-btn" href="#">Delete</a>
                     <?php endif; ?>
                 </div>
@@ -24,7 +24,7 @@ $games = getList($query);
                     <br>
                     <?=$g['category']; ?>
                     <br>
-                    <?=$g['creator']; ?>
+                    <?=$g['developer']; ?>
                 </div>
             </div>
             <?php if($i % 6 == 0): ?>
