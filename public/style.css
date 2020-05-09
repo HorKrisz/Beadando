@@ -115,6 +115,6 @@ body {
 }
 
 .gamecard:hover > .gc-info-b {
-    color: yellow;
+    color: rgb(27, 29, 168);
     background-color: rgba(15, 15, 15, 0.9);
 }

@@ -32,6 +32,7 @@
                 <div class="form-group">
                     <label for="gameImage">Image</label>
                     <input type="file" class="form-control-file" id="gameImage" name="gameimage">
+                    <small class="form-text text-muted">The image must be in the public/images folder</small>
                 </div>
             </div>
             <div class="form-row">

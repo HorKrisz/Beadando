@@ -5,18 +5,20 @@ $record = getRecord($query);
 ?>
 
 <div class="main-container">
-    <center><h2>Welcome</h2></center>
+    <center><h2>Welcome <?=IsUserLoggedIn() ? ", ".$_SESSION['username'] : ""?></h2></center>
     <div class="home-info">
         <h3>Recently added game</h3>
-        <div class="gamecard">
-            <img src="<?=PUBLIC_DIR.'images/'.$record['image']; ?>" alt="Borítókép">
-            <div class="gc-info">
-                <center><h4><?=$record['title']; ?></h4></center>
-                <br>
-                <?=$record['category']; ?>
-                <br>
-                <?=$record['developer']; ?>
+        <?php if (!empty($record)): ?>
+            <div class="gamecard">
+                <img src="<?=PUBLIC_DIR.'images/'.$record['image']; ?>" alt="Borítókép">
+                <div class="gc-info">
+                    <center><h4><?=$record['title']; ?></h4></center>
+                    <br>
+                    <?=$record['category']; ?>
+                    <br>
+                    <?=$record['developer']; ?>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
     </div>
 </div>

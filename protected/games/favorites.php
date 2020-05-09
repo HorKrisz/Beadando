@@ -18,7 +18,7 @@ $games = getList($query);
 
 <div class="main-container">
     <?php if(count($games) <= 0): ?>
-        There are no games!
+        Empty
     <?php else: ?>
         <?php $i=0; ?>
         <?php foreach($games as $g): ?>

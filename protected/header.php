@@ -1,1 +1,1 @@
-<img src="<?=PUBLIC_DIR.'images/placeholder.png'; ?>" class="img-fluid" alt="Kép">
+<img src="<?=PUBLIC_DIR.'images/header.png'; ?>" class="img-fluid" alt="Kép">
